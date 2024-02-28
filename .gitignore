@@ -25,3 +25,6 @@ licenses.json
 /darwin-amd*/
 /darwin-arm*/
 /windows/
+
+# nix
+.direnv

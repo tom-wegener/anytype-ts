@@ -14,7 +14,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -146,7 +145,7 @@ func isFileGateway(port string) bool {
 
 	bu := bytes.NewBuffer(nil)
 	resp.Request.Write(bu)
-	ioutil.ReadAll(bu)
+	io.ReadAll(bu)
 
 	defer resp.Body.Close()
 	// should return 301 redirect Location: /file/
